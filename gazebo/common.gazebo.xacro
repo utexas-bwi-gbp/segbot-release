@@ -3,7 +3,7 @@
 <root
   xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:property name="SIMPLE_ROBOT_RADIUS" value="0.05" />
+  <xacro:property name="SIMPLE_ROBOT_RADIUS" value="0.30" />
 
   <xacro:macro name="gazebo_segbot_base_link_surface">
     <gazebo reference="base_link">
@@ -59,6 +59,9 @@
       <wheelDiameter>0.2410</wheelDiameter>
       <torque>20</torque>
       <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
     </plugin>
   </xacro:macro>
 
