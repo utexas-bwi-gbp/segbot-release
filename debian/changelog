@@ -1,7 +1,0 @@
-ros-hydro-segbot (0.1.0-0quantal) quantal; urgency=high
-
-  * catkinizing against hydro. progress towards #6 <https://github.com/utexas-bwi/segbot/issues/6>
-
- -- Piyush Khandelwal <piyushk@gmail.com>  Fri, 28 Jun 2013 05:00:00 -0000
-
-
