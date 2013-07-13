@@ -2,10 +2,14 @@
 Changelog for package segbot_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.4 (2013-07-13)
+------------------
+* releasing 0.1.4 with properly formatted changelogs. see `#10 <https://github.com/utexas-bwi/segbot/issues/10>`_
+* some cmake cleanup
 
-* added changelog file to each individual package
+0.1.3 (2013-07-10)
+------------------
+* uncommented openni_launch as it has now been released into hydro. closes `#9 <https://github.com/utexas-bwi/segbot/issues/9>`_
 
 0.1.0 (2013-06-28)
 ------------------
