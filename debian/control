@@ -1,0 +1,12 @@
+Source: ros-hydro-segbot-sensors
+Section: misc
+Priority: extra
+Maintainer: "Piyush Khandelwal <piyushk@gmail.com>, Jack O'Quin <jack.oquin@gmail.com>"
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-laser-filters
+Homepage: http://ros.org/wiki/segbot_sensors
+Standards-Version: 3.9.2
+
+Package: ros-hydro-segbot-sensors
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-filters, ros-hydro-freenect-launch, ros-hydro-hokuyo-node, ros-hydro-laser-filters, ros-hydro-openni-launch, ros-hydro-tf
+Description: This package contains all the sensor specific launch files and all the relevant filters that are applied on sensor data before being used by Segbot.
