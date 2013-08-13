@@ -1,3 +1,0 @@
-<launch>
-  <node name="rviz" type="rviz" pkg="rviz" args="--display-config $(find segbot_sensors)/rviz/sensors.rviz" />
-</launch>
