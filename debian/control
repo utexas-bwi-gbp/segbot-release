@@ -1,0 +1,12 @@
+Source: ros-hydro-segbot
+Section: misc
+Priority: extra
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin
+Homepage: http://ros.org/wiki/segbot
+Standards-Version: 3.9.2
+
+Package: ros-hydro-segbot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-segbot-bringup, ros-hydro-segbot-description, ros-hydro-segbot-sensors
+Description: Drivers for Segway RMP 50 based robots at the University of Texas at Austin
