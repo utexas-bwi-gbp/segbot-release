@@ -1,3 +1,26 @@
+## segbot - 0.1.7-0
+
+User `piyushk@robot-devil` released the packages in the `segbot` repository by running `/usr/bin/bloom-release --track hydro --rosdistro hydro segbot` on `Tue, 03 Sep 2013 16:18:22 -0000`
+
+These packages were released:
+- `segbot`
+- `segbot_bringup`
+- `segbot_description`
+- `segbot_sensors`
+
+Version of package(s) in repository `segbot`:
+- rosdistro version: `0.1.6-0`
+- old version: `0.1.6-0`
+- new version: `0.1.7-0`
+
+Versions of tools used:
+- bloom version: `0.4.4`
+- catkin_pkg version: `0.1.19`
+- rosdep version: `0.10.21`
+- rosdistro version: `0.2.13`
+- vcstools version: `0.1.31`
+
+
 ## segbot - 0.1.6-0
 
 User `piyushk@robot-devil` released the packages in the `segbot` repository by running `/usr/bin/bloom-release segbot --track hydro --rosdistro hydro` on `Tue, 13 Aug 2013 21:41:21 -0000`
