@@ -33,3 +33,21 @@ foreach(dir config launch rviz)
   install(DIRECTORY ${dir}/ 
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
+
+# unit tests are enabled selectively
+if (CATKIN_ENABLE_TESTING)
+  find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(launch)
+  roslaunch_add_file_check(launch/hokuyo)
+  roslaunch_add_file_check(launch/ptgrey)
+
+  ## launch/kinect/kinect.launch fails, because of
+  ## ros-drivers/openni_launch#10.
+  ##
+  ## Test the individual files that do work, restore testing of them
+  ## all when openni_launch has been fixed.
+  #roslaunch_add_file_check(launch/kinect)
+  roslaunch_add_file_check(launch/kinect/kinect-filters.launch)
+  roslaunch_add_file_check(launch/kinect/kinect-laserscan.launch)
+
+endif (CATKIN_ENABLE_TESTING)
