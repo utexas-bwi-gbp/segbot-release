@@ -1,0 +1,43 @@
+ros-hydro-segbot (0.1.8-0precise) precise; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 03 Dec 2013 18:30:00 -0000
+
+ros-hydro-segbot (0.1.7-0precise) precise; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Mon, 02 Sep 2013 18:30:00 -0000
+
+ros-hydro-segbot (0.1.6-0precise) precise; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Mon, 12 Aug 2013 18:30:00 -0000
+
+ros-hydro-segbot (0.1.5-0precise) precise; urgency=high
+
+  * cleaned up and alphabetized cmake and package description files
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Mon, 15 Jul 2013 18:30:00 -0000
+
+ros-hydro-segbot (0.1.4-0precise) precise; urgency=high
+
+  * releasing 0.1.4 with properly formatted changelogs. see #10 <https://github.com/utexas-bwi/segbot/issues/10>
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Fri, 12 Jul 2013 18:30:00 -0000
+
+ros-hydro-segbot (0.1.3-0precise) precise; urgency=high
+
+  * bumping metapackage version
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 09 Jul 2013 18:30:00 -0000
+
+ros-hydro-segbot (0.1.0-0precise) precise; urgency=high
+
+  * catkinizing against hydro. progress towards #6 <https://github.com/utexas-bwi/segbot/issues/6>
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Thu, 27 Jun 2013 18:30:00 -0000
+
+
