@@ -1,0 +1,8 @@
+ros-hydro-segbot-firmware (0.2.0-0raring) raring; urgency=high
+
+  * Initial release to Hydro.
+  * Arduino firmware for sonar and IR sensors.
+
+ -- Jack O'Quin <jack.oquin@gmail.com>  Thu, 17 Apr 2014 05:00:00 -0000
+
+
