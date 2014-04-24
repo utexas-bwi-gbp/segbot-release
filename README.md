@@ -1,3 +1,27 @@
+## segbot (hydro) - 0.2.1-0
+
+The packages in the `segbot` repository were released into the `hydro` distro by running `/usr/bin/bloom-release segbot -r hydro -t hydro` on `Thu, 24 Apr 2014 23:19:02 -0000`
+
+These packages were released:
+- `segbot`
+- `segbot_bringup`
+- `segbot_description`
+- `segbot_firmware`
+- `segbot_sensors`
+
+Version of package(s) in repository `segbot`:
+- rosdistro version: `0.2.0-0`
+- old version: `0.2.0-0`
+- new version: `0.2.1-0`
+
+Versions of tools used:
+- bloom version: `0.5.4`
+- catkin_pkg version: `0.2.1`
+- rosdep version: `0.10.27`
+- rosdistro version: `0.3.5`
+- vcstools version: `0.1.33`
+
+
 ## segbot (hydro) - 0.2.0-0
 
 The packages in the `segbot` repository were released into the `hydro` distro by running `/usr/bin/bloom-release segbot --track hydro --ros-distro hydro` on `Thu, 17 Apr 2014 16:35:36 -0000`
