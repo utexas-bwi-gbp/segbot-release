@@ -4,14 +4,19 @@ project(segbot_bringup)
 find_package(catkin REQUIRED)
 catkin_package()
 
+# Install all udev files
+install(DIRECTORY udev/ 
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/udev)
+
 # Install all launch files
 install(DIRECTORY launch/ 
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
 
 # Install the teleoperation script for rosrun 
 install(PROGRAMS 
-  scripts/teleop_twist_keyboard
   scripts/get_addr
+  scripts/teleop_twist_keyboard
+  scripts/udev_install
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 # unit tests are enabled selectively
@@ -28,4 +33,4 @@ if (CATKIN_ENABLE_TESTING)
   roslaunch_add_file_check(launch/segbot_hokuyo.launch)
   roslaunch_add_file_check(launch/segbot.launch)
   roslaunch_add_file_check(launch/segway_base.launch)
-endif (CATKIN_ENABLE_TESTING)
+endif()
