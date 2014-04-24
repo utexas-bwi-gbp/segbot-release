@@ -1,0 +1,12 @@
+Source: ros-hydro-segbot-firmware
+Section: misc
+Priority: extra
+Maintainer: Jack O'Quin <jack.oquin@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin
+Homepage: http://ros.org/wiki/segbot_firmware
+Standards-Version: 3.9.2
+
+Package: ros-hydro-segbot-firmware
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+Description: Arduino firmware for BWI segbot sensor array.
