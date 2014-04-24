@@ -3,7 +3,16 @@ cmake_minimum_required(VERSION 2.8.3)
 project(segbot_sensors)
 
 find_package(catkin REQUIRED
-  COMPONENTS laser_filters message_generation pcl_ros roslint sensor_msgs tf)
+  COMPONENTS
+    laser_filters
+    message_generation
+    nodelet
+    pcl_ros
+    pluginlib
+    roscpp
+    roslint
+    sensor_msgs
+    tf)
 
 add_message_files(DIRECTORY msg FILES RangeArray.msg)
 generate_messages(DEPENDENCIES sensor_msgs)
@@ -58,7 +67,7 @@ install(DIRECTORY scripts/
 foreach(dir config launch rviz)
   install(DIRECTORY ${dir}/ 
     DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
-endforeach(dir)
+endforeach()
 
 # Lint Python modules for PEP8 compatibility
 file(GLOB_RECURSE ${PROJECT_NAME}_PY_SCRIPTS
@@ -69,16 +78,8 @@ roslint_python(${${PROJECT_NAME}_PY_SCRIPTS})
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
   roslaunch_add_file_check(launch)
+  roslaunch_add_file_check(launch/arduino)
   roslaunch_add_file_check(launch/hokuyo)
+  roslaunch_add_file_check(launch/kinect)
   roslaunch_add_file_check(launch/ptgrey)
-
-  ## launch/kinect/kinect.launch fails, because of
-  ## ros-drivers/openni_launch#10.
-  ##
-  ## Test the individual files that do work, restore testing of them
-  ## all when openni_launch has been fixed.
-  #roslaunch_add_file_check(launch/kinect)
-  roslaunch_add_file_check(launch/kinect/kinect-filters.launch)
-  roslaunch_add_file_check(launch/kinect/kinect-laserscan.launch)
-
-endif (CATKIN_ENABLE_TESTING)
+endif()
