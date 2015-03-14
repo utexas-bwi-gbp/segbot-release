@@ -2,6 +2,11 @@
 Changelog for package segbot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.0 (2015-03-14)
+------------------
+* added platform independent tag to metapackage.
+* Contributors: Piyush Khandelwal
+
 0.2.1 (2014-04-24)
 ------------------
 
