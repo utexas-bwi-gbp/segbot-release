@@ -1,8 +1,7 @@
-/* -*- mode: C++ -*- */
 /*********************************************************************
 * Software License Agreement (BSD License)
 *
-*  Copyright (c) 2014 Jack O'Quin
+*  Copyright (C) 2014, 2015, Jack O'Quin
 *  All rights reserved.
 *
 *  Redistribution and use in source and binary forms, with or without
@@ -33,34 +32,43 @@
 *  POSSIBILITY OF SUCH DAMAGE.
 *********************************************************************/
 
-#ifndef _RANGES_TO_CLOUD_
-#define _RANGES_TO_CLOUD_ 1
 
 /** @file
 
-    @brief ROS interface for converting RangeArray messages to PointCloud2.
+@brief ROS nodelet for converting RangeArray messages to PointCloud2.
 
 */
 
 #include <ros/ros.h>
-#include <tf/transform_listener.h>
-#include <segbot_sensors/RangeArray.h>
+#include <pluginlib/class_list_macros.h>
+#include <nodelet/nodelet.h>
+
+#include "range_to_cloud.h"
 
 namespace segbot_sensors
 {
-  class RangesToCloud
+  class RangeNodelet: public nodelet::Nodelet
   {
   public:
-    RangesToCloud(ros::NodeHandle node, ros::NodeHandle priv_nh);
-    ~RangesToCloud(){}
+    RangeNodelet() {}
+    ~RangeNodelet() {}
 
   private:
-    void processRanges(const segbot_sensors::RangeArray::ConstPtr &rangesMsg);
+    boost::shared_ptr<segbot_sensors::RangeToCloud> cnv_;
 
-    ros::Subscriber ranges_;
-    ros::Publisher points_;
-    tf::TransformListener listener_;
+    virtual void onInit()
+    {
+      ros::NodeHandle priv_nh(getPrivateNodeHandle());
+      ros::NodeHandle node(getNodeHandle());
+      cnv_.reset(new segbot_sensors::RangeToCloud(node, priv_nh));
+    }
+
   };
 }; // end namespace segbot_sensors
 
-#endif // _RANGES_TO_CLOUD_
+// Register this plugin with pluginlib.  Names must match
+// segbot_sensors_plugins.xml.
+//
+// parameters are: package, class name, class type, base class type
+PLUGINLIB_DECLARE_CLASS(segbot_sensors, RangeNodelet,
+                        segbot_sensors::RangeNodelet, nodelet::Nodelet);
