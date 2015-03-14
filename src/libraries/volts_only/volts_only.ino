@@ -45,29 +45,10 @@
 #include "arduino_device.h"
 
 // include each device from a separate "Arduino library"
-#include "sonar.h"
 #include "voltmeter.h"
-//#include "imu.h"                        // ignore IMU
-
-// Ugly hacks needed to circumvent Arduino build silliness:
-#include <NewPing.h>                    // to resolve sonar reference
-// ignore IMU for now
-//#include <Wire.h>                       // to resolve IMU references
-//#include "I2Cdev.h"
-//#include "MPU9150Lib.h"
-//#include "CalLib.h"
-//#include <dmpKey.h>
-//#include <dmpmap.h>
-//#include <inv_mpu.h>
-//#include <inv_mpu_dmp_motion_driver.h>
-//#include <EEPROM.h>
-
-// Number of devices with IMU:
-//#define N_DEVICES 3                   ///< number of devices to poll
-// without IMU:
-#define N_DEVICES 2                   ///< number of devices to poll
 
 #define LED_PIN 13                    ///< pin with LED attached.
+#define N_DEVICES 1                   ///< number of devices to poll
 #define POLL_INTERVAL 10              ///< poll interval in milliseconds
 
 ArduinoDevice *devices[N_DEVICES];    ///< All the device handlers
@@ -85,8 +66,6 @@ void setup()
 
   // allocate and initialize all attached devices
   devices[0] = new Voltmeter();
-  devices[1] = new Sonar();
-  //devices[2] = new Imu();               // ignore IMU
 }
 
 /// Called repeatedly in Arduino main loop, must complete in under 33ms.
