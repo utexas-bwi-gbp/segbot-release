@@ -1,0 +1,12 @@
+Source: ros-hydro-segbot-bringup
+Section: misc
+Priority: extra
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin, ros-hydro-roslaunch
+Homepage: http://ros.org/wiki/segbot_bringup
+Standards-Version: 3.9.2
+
+Package: ros-hydro-segbot-bringup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-netifaces, ros-hydro-joint-state-publisher, ros-hydro-robot-state-publisher (>= 1.9.10), ros-hydro-segbot-description, ros-hydro-segbot-sensors, ros-hydro-segway-rmp, ros-hydro-tf
+Description: Contains launch files and runtime scripts necessary for running segbots in simulation and in the real world.
