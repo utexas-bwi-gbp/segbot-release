@@ -1,3 +1,29 @@
+## segbot (indigo) - 0.3.1-0
+
+The packages in the `segbot` repository were released into the `indigo` distro by running `/usr/bin/bloom-release segbot --track indigo --rosdistro indigo --non-i` on `Thu, 26 Mar 2015 15:32:25 -0000`
+
+These packages were released:
+- `segbot`
+- `segbot_bringup`
+- `segbot_description`
+- `segbot_firmware`
+- `segbot_sensors`
+
+Version of package(s) in repository `segbot`:
+- upstream repository: https://github.com/utexas-bwi/segbot.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.3.1-0`
+
+Versions of tools used:
+- bloom version: `0.5.19`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.10.33`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.35`
+
+
 ## segbot (hydro) - 0.3.1-0
 
 The packages in the `segbot` repository were released into the `hydro` distro by running `/usr/bin/bloom-release segbot --track hydro --rosdistro hydro --non-interactive` on `Wed, 25 Mar 2015 03:26:49 -0000`
