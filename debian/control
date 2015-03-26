@@ -1,0 +1,12 @@
+Source: ros-indigo-segbot
+Section: misc
+Priority: extra
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://ros.org/wiki/segbot
+Standards-Version: 3.9.2
+
+Package: ros-indigo-segbot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-segbot-bringup, ros-indigo-segbot-description, ros-indigo-segbot-firmware, ros-indigo-segbot-sensors
+Description: ROS drivers for controlling Segway RMP 50 based robots at Learning Agents Research Group (LARG), AI Laboratory, Department of Computer Science, The University of Texas at Austin.
