@@ -1,0 +1,12 @@
+Source: ros-indigo-segbot-bringup
+Section: misc
+Priority: extra
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin, ros-indigo-roslaunch
+Homepage: http://ros.org/wiki/segbot_bringup
+Standards-Version: 3.9.2
+
+Package: ros-indigo-segbot-bringup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-netifaces, ros-indigo-joint-state-publisher, ros-indigo-robot-state-publisher (>= 1.9.10), ros-indigo-segbot-description, ros-indigo-segbot-sensors, ros-indigo-segway-rmp, ros-indigo-tf
+Description: Contains launch files and runtime scripts necessary for running segbots in simulation and in the real world.
