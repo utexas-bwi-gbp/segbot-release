@@ -1,0 +1,145 @@
+ros-hydro-segbot-bringup (0.3.2-0precise) precise; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 31 Mar 2015 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.3.1-0precise) precise; urgency=high
+
+  * removed redundant segbot v1 models.
+  * updated segbot v2 model to use correct URDF.
+  * Contributors: Piyush Khandelwal
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 24 Mar 2015 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.3.0-0precise) precise; urgency=high
+
+  * fixed default depth_registered flag to allow kinect to work properly.
+  * use different filters for segbot v1 and segbot v2 due to differences between different laser models.
+  * added launch file for segbot v2.
+  * fixed some issues with frame ids for multi robot setup.
+  * Changed the value of "depth_only" to "true" so that the published point cloud contains color information as well.
+  * Contributors: Jivko Sinapov, Piyush Khandelwal
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Sat, 14 Mar 2015 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.2.1-0precise) precise; urgency=high
+
+  * segbot_bringup: install udev rules (#26 <https://github.com/utexas-bwi/segbot/issues/26>)
+  * fix some problems catkin_lint discovered
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Thu, 24 Apr 2014 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.2.0-0precise) precise; urgency=high
+
+  * Release to Hydro.
+  * Added udev rules for segbot, and updated the kinect laserscan
+    configuration.
+  * Catkin_lint approved packages.
+  * Updated descriptions and licensing information
+  * Fixed licensing information from borrowed scripts.
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Thu, 17 Apr 2014 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.9-0precise) precise; urgency=high
+
+  * revert update for #16 <https://github.com/utexas-bwi/segbot/issues/16> now that we can use the standard
+    robot_state_publisher (#21 <https://github.com/utexas-bwi/segbot/issues/21>).
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Sun, 15 Dec 2013 06:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.8-0precise) precise; urgency=high
+
+  * use ``roslaunch_add_files_check()`` to test that required launch
+    file dependencies are declared.
+  * fixed a few minor errors found on the real robot
+  * added configuration with both the hokuyo and kinect in it
+  * preparing to add kinect as well as the hokuyo for navigation
+  * update change history
+  * segbot_bringup: use roslaunch_add_file_check() (#20 <https://github.com/utexas-bwi/segbot/issues/20>)
+  * Contributors: BWI, Jack O'Quin, Piyush Khandelwal
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Wed, 04 Dec 2013 06:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.7-0precise) precise; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 03 Sep 2013 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.6-0precise) precise; urgency=high
+
+  * removed nodelet manager reuse for depthimage_to_laserscan for the time being
+  * added a script for getting the ip address
+  * fixed segbot_bringup to work with upcoming changes to freenect/openni launch files
+  * fixed tf prefix setting for gazebo openni_kinect plugin
+  * adding prefix enabled copy of robot_state_publisher. closes #16 <https://github.com/utexas-bwi/segbot/issues/16>
+  * cleaned up segbot description
+  * renamed all internal launch files to xml. They don't show up in roslaunch any more. closes #15 <https://github.com/utexas-bwi/segbot/issues/15>
+  * moved joint state publisher to auxiliary files - now runs on both the real robots and in simulation. closes #14 <https://github.com/utexas-bwi/segbot/issues/14>
+  * significantly cleaned up segbot_description. need new version of xacro to be released before merging with devel. closes #7 <https://github.com/utexas-bwi/segbot/issues/7>, #12 <https://github.com/utexas-bwi/segbot/issues/12>
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 13 Aug 2013 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.5-0precise) precise; urgency=high
+
+  * cleaned up and alphabetized cmake and package description files
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 16 Jul 2013 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.4-0precise) precise; urgency=high
+
+  * releasing 0.1.4 with properly formatted changelogs. see #10 <https://github.com/utexas-bwi/segbot/issues/10>
+  * some cmake cleanup
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Sat, 13 Jul 2013 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.3-0precise) precise; urgency=high
+
+  * fixed teleop name and installation
+  * switched python teleop script from rosbuild to catkin
+  * added keyboard teleop script from teleop_twist_keyboard
+  * fixed launch directory location
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Wed, 10 Jul 2013 05:00:00 -0000
+
+ros-hydro-segbot-bringup (0.1.0-0precise) precise; urgency=high
+
+  * now requires robot state publisher and joint state publisher
+  * catkinized segbot_bringup. closes #6 <https://github.com/utexas-bwi/segbot/issues/6>
+  * catkinizing against hydro. progress towards #6 <https://github.com/utexas-bwi/segbot/issues/6>
+  * all 3 kinect launch files working as expected on real hardware
+  * The standard segbot kinect configuration now works on real hardware
+  * more cleanup. will now test and fix on robot
+  * merging common files and more cleanup
+  * Merge branch 'master' of github.com:utexas-bwi/segbot
+  * modifying launch files and correcting typo for summer cleanup
+  * added parameter to disable nodelet manager if already running
+  * updating dependencies now that libsegwayrmp and segway_rmp have been successfully catkinized
+  * removing dependencies during catkinization process
+  * checking in configuration code not committed last time
+  * added a no sensor configuration. also finally fixed spelling mistake.
+  * a couple of bug fixes
+  * added a new configuration for the Pharos IRISS group
+  * added a robot configuration for assignment 1
+  * updated manifest for segbot_bringup
+  * the tmp file is now deletted after each use. fixed the hokuyo configuration. closes #3 <https://github.com/utexas-bwi/segbot/issues/3>
+  * using full gazebo model by default
+  * added the hokuyo laser filter in the auxillary configuration of the hokuyo robot
+  * changed state_publisher to robot_state_publisher as suggested by warning
+  * a larger number of changes (added collision+material properties for gazebo, some bug fixes for hokuyo and kinect launches). Still trying to get gazebo to behave properly
+  * fixed up h/w launch files, separating out common simulation elements
+  * reogranized all the sensor launch files
+  * fixed a number of tf_prefix related issues
+  * fixed a bug where joint states were not being published on the real robots
+  * fixed a bug where joint states were not being published on the real robots, also introduced a hokuyo based launch file
+  * fixed up the kinect based segway launch file (missing the device id for now)
+  * some launch file reorganization
+  * added a separate package to hold launch files for sensors, mostly while kinect issues are sorted out
+  * fixing launch files inside the bringup package
+  * consolidated all launch files to the brringup package
+  * initial commit of the segbot package from the svn repository
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Fri, 28 Jun 2013 05:00:00 -0000
+
+
