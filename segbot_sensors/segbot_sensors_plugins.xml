@@ -1,0 +1,22 @@
+<class_libraries>
+  <library path="lib/libsegbot_sensors_filters">
+    <class name="segbot_sensors/SegbotFootprintFilter" type="segbot_sensors::SegbotFootprintFilter" 
+	    base_class_type="filters::FilterBase<sensor_msgs::LaserScan>">
+      <description>
+	 This is a filter that removes points in a certain footprint. Useful for removing known laserscan hits on the body of the robot.
+      </description>
+    </class>
+    <class name="segbot_sensors/NanToInfFilter" type="segbot_sensors::NanToInfFilter" 
+	    base_class_type="filters::FilterBase<sensor_msgs::LaserScan>">
+      <description>
+	 This is a filter that converts nan points to +infinity, effectively making the assumption that locations where no readings are returned are free space.
+      </description>
+    </class>
+    <class name="segbot_sensors/AngleRangeFilter" type="segbot_sensors::AngleRangeFilter" 
+	    base_class_type="filters::FilterBase<sensor_msgs::LaserScan>">
+      <description>
+	 This is a filter that limits the angle range of the sensor.
+      </description>
+    </class>
+  </library>
+</class_libraries>
