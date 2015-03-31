@@ -1,0 +1,12 @@
+Source: ros-hydro-segbot-sensors
+Section: misc
+Priority: extra
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-hydro-catkin, ros-hydro-diagnostic-msgs, ros-hydro-geometry-msgs, ros-hydro-laser-filters, ros-hydro-message-generation, ros-hydro-nodelet, ros-hydro-pcl-ros, ros-hydro-pluginlib, ros-hydro-roscpp, ros-hydro-roslaunch, ros-hydro-roslint, ros-hydro-sensor-msgs, ros-hydro-smart-battery-msgs, ros-hydro-std-msgs, ros-hydro-tf
+Homepage: http://ros.org/wiki/segbot_sensors
+Standards-Version: 3.9.2
+
+Package: ros-hydro-segbot-sensors
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-serial, ros-hydro-camera1394, ros-hydro-depthimage-to-laserscan, ros-hydro-diagnostic-msgs, ros-hydro-filters, ros-hydro-freenect-launch, ros-hydro-geometry-msgs, ros-hydro-hokuyo-node, ros-hydro-laser-filters, ros-hydro-message-runtime, ros-hydro-nodelet, ros-hydro-openni-launch, ros-hydro-pcl-ros, ros-hydro-pluginlib, ros-hydro-roscpp, ros-hydro-rospy, ros-hydro-rviz, ros-hydro-sensor-msgs, ros-hydro-smart-battery-msgs, ros-hydro-std-msgs, ros-hydro-tf, ros-hydro-tf2-ros, ros-hydro-urg-node
+Description: Contains sensor specific launch files and all the relevant filters that are applied on sensor data before being used by the segbot.
