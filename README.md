@@ -1,60 +1,21 @@
-Segbot Arduino firmware
-=======================
+The segbot ROS meta-package
+===========================
 
-This package contains Arduino firmware for the UTexas BWI segbot
-sensor array.
+ROS drivers for controlling Segway RMP 50 based robots at Learning Agents 
+Research Group (LARG), AI Laboratory, Department of Computer Science, 
+The University of Texas at Austin. 
 
-Access to Serial Ports
-----------------------
+Detailed documentation for this code-base can be found on the ROS wiki:
+* [segbot_bringup](http://wiki.ros.org/segbot_bringup)
+* [segbot_description](http://wiki.ros.org/segbot_description)
+* [segbot_firmware](http://wiki.ros.org/segbot_firmware)
+* [segbot_sensors](http://wiki.ros.org/segbot_sensors)
 
-To access the Arduino serial port, you must be authorized for the
-"dialout" group.  To verify that you are a member of that group, run
-this command:
+All the code in this package has been released using a modified BSD license, 
+which can be found with this package [here](LICENSE).
 
-    $ id | grep dialout
-
-If you are in the group, "dialout" will appear in the printed output.   
-
-If you are not yet authorized, run this command on a personal Ubuntu
-system:
-
-    $ sudo usermod -a -G dialout your_user_id
-
-**But**, *do not* run that command on any of the BWI robots or lab
-machines.  They maintain a shared user and group database, so ask a
-system administrator to update it for you.
-
-In either case, logout and login after your group membership has been
-updated, and verify that you are now in the "dialout" group.
-
-Build and Install
------------------
-
-The CMakeLists.txt does not yet support make and install from the
-command line.  To build and install firmware on the Arduino board,
-first install the Arduino development tools.  On Ubuntu, run these
-commands:
-
-    $ sudo apt-get install arduino
-    $ mkdir ~/sketchbook 
-    $ cd ~/sketchbook
-    $ ln -s $(rospack find segbot_firmware)/src/libraries .
-
-Plug in the USB cable, then run the Arduino GUI:
-
-    $ arduino
-
-Select ``File > Sketchbook > Libraries`` followed by the desired
-firmware version.  The standard one is named ``segbot_arduino``.
-Then, click the ``->`` icon to compile the microcode and load it into
-the controller.
-
-ROS Driver
-----------
-
-When the firmware is loaded, you can run the ROS device driver:
-
-    $ roslaunch segbot_sensors arduino.launch --screen
-
-The ``segbot_sensors`` package documentation describes the topics
-published.
+All academic uses of this work should cite the following representative paper:
+"Piyush Khandelwal, Fangkai Yang, Matteo Leonetti, Vladimir Lifschitz, and
+Peter Stone. Planning in Action Language BC while Learning Action Costs for
+Mobile Robots. International Conference on Automated Planning and Scheduling
+(ICAPS). 2014."
