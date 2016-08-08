@@ -1,20 +1,51 @@
-The segbot ROS metapackage
-==========================
+## Segbot LED Package
 
-[![Build Status](https://travis-ci.org/utexas-bwi/segbot.svg?branch=master)](https://travis-ci.org/utexas-bwi/segbot)
+This ROS package contains code for controlling Pololu WS2812B-Based LED Strips.
 
-ROS drivers for controlling Segway-based robots at the Learning Agents
-Research Group (LARG), AI Laboratory, Department of Computer Science,
-University of Texas at Austin.
+### Configuring Metro Mini Microcontroller
 
-Documentation for much of this code-base can be found on the ROS wiki:
-* [segbot](http://wiki.ros.org/segbot)
+* Install recent Arduino IDE if not already installed on machine.
 
-All the code in this package has been released using a modified BSD license,
-which can be found with this package [here](LICENSE).
+* Add pololu-led-strip-arduino library to the Arduino IDE.
 
-All academic uses of this work should cite the following representative paper:
-"Piyush Khandelwal, Fangkai Yang, Matteo Leonetti, Vladimir Lifschitz, and
-Peter Stone. Planning in Action Language BC while Learning Action Costs for
-Mobile Robots. International Conference on Automated Planning and Scheduling
-(ICAPS). 2014."
+* Set Board Manager to Arduino UNO
+
+* Open led_serial_driver.ino and upload to device.
+
+### Configuring udev Rules
+
+Retrieve the attributes of the microcontroller to create the proper udev rule for the specific device. 
+
+* You will need to monitor udev events to determine the serial port name for the device. Execute the command: 
+
+```
+udevadm monitor
+```
+
+* Plug in the device and annotate what /dev/ name it was assigned.
+
+* Execute the command below and replace the question marks with the name given to your device.
+
+```
+udevadm info --attribute-walk --name=/dev/?????
+```
+
+* Retrive the follwing attribute values and replace the values in 99-metromini.rules.
+
+	* ATTRS{idVendor}
+	* ATTRS{idProduct}
+	* ATTRS{serial}
+
+### Setting Up Segbot LED Configuration
+
+To utilize the Segbot LED package you must configure the led segments of the robot in the launch file.
+The package led animations are configured for use on the Segbots part of the BWI Project, but could 
+be modified for other robot designs.
+
+LED Strips must be set up in a similar style as shown below.
+
+<img src="/segbot_led/images/front.JPG" alt="Front" width="300">
+<img src="/segbot_led/images/back.JPG" alt="Back" width="300">
+<img src="/segbot_led/images/left.JPG" alt="Left" width="300">
+<img src="/segbot_led/images/right.JPG" alt="Right" width="300">
+
