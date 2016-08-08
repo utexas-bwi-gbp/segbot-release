@@ -1,6 +1,6 @@
 <package format="2">
   <name>segbot_sensors</name>
-  <version>0.3.3</version>
+  <version>0.3.4</version>
   <description>
     Contains sensor specific launch files and all the relevant filters that are
     applied on sensor data before being used by the segbot.
@@ -19,6 +19,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <depend>diagnostic_msgs</depend>
+  <depend>dynamic_reconfigure</depend>
   <depend>geometry_msgs</depend>
   <depend>laser_filters</depend>
   <depend>nodelet</depend>
@@ -42,11 +43,15 @@
   <exec_depend>message_runtime</exec_depend>
   <exec_depend>openni_launch</exec_depend>
   <exec_depend>python-serial</exec_depend>
+  <exec_depend>python-scipy</exec_depend>
+  <exec_depend>python-numpy</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>rqt_robot_monitor</exec_depend>
   <exec_depend>rviz</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
   <exec_depend>urg_node</exec_depend>
+  <exec_depend>velodyne_driver</exec_depend>
+  <exec_depend>velodyne_pointcloud</exec_depend>
 
   <test_depend>roslaunch</test_depend>
 
