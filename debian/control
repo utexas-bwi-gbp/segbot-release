@@ -1,0 +1,12 @@
+Source: ros-indigo-segbot-sensors
+Section: misc
+Priority: extra
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin, ros-indigo-diagnostic-msgs, ros-indigo-dynamic-reconfigure, ros-indigo-geometry-msgs, ros-indigo-laser-filters, ros-indigo-message-generation, ros-indigo-nodelet, ros-indigo-pcl-ros, ros-indigo-pluginlib, ros-indigo-roscpp, ros-indigo-roslaunch, ros-indigo-roslint, ros-indigo-sensor-msgs, ros-indigo-smart-battery-msgs, ros-indigo-std-msgs, ros-indigo-tf
+Homepage: http://ros.org/wiki/segbot_sensors
+Standards-Version: 3.9.2
+
+Package: ros-indigo-segbot-sensors
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-numpy, python-scipy, python-serial, ros-indigo-camera1394, ros-indigo-depthimage-to-laserscan, ros-indigo-diagnostic-aggregator, ros-indigo-diagnostic-msgs, ros-indigo-dynamic-reconfigure, ros-indigo-filters, ros-indigo-freenect-launch, ros-indigo-geometry-msgs, ros-indigo-hokuyo-node, ros-indigo-laser-filters, ros-indigo-message-runtime, ros-indigo-nodelet, ros-indigo-openni-launch, ros-indigo-pcl-ros, ros-indigo-pluginlib, ros-indigo-roscpp, ros-indigo-rospy, ros-indigo-rqt-robot-monitor, ros-indigo-rviz, ros-indigo-sensor-msgs, ros-indigo-smart-battery-msgs, ros-indigo-std-msgs, ros-indigo-tf, ros-indigo-tf2-ros, ros-indigo-urg-node, ros-indigo-velodyne-driver, ros-indigo-velodyne-pointcloud
+Description: Contains sensor specific launch files and all the relevant filters that are applied on sensor data before being used by the segbot.
