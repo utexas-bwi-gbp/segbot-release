@@ -2,6 +2,11 @@
 Changelog for package segbot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.4 (2016-08-08)
+------------------
+* segbot: update metapackage description
+* Contributors: Jack O'Quin
+
 0.3.3 (2015-08-05)
 ------------------
 * merge segbot_simulator packages into segbot (`#46 <https://github.com/utexas-bwi/segbot/issues/46>`_)
