@@ -1,0 +1,87 @@
+ros-indigo-segbot-gui (0.3.4-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Mon, 08 Aug 2016 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.3.3-0trusty) trusty; urgency=high
+
+  * merge segbot_apps packages into segbot (#46 <https://github.com/utexas-bwi/segbot/issues/46>)
+  * Contributors: Jack O'Quin
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Wed, 05 Aug 2015 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.3.1-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 31 Mar 2015 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.3.0-0trusty) trusty; urgency=high
+
+  * removed unnecessary script installation which installs in global bin instead of package bin.
+  * migrated QuestionDialog srv to bwi_msgs in bwi_common
+  * now return preempted option when preempted
+  * fixed a timeout issue with the gui where preempted requests were not timing out.
+  * enlarge the GUI font
+  * Contributors: Piyush Khandelwal, Shiqi Zhang
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 24 Mar 2015 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.2.1-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 22 Apr 2014 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.2.0-0trusty) trusty; urgency=high
+
+  * now catkin_lint approved. found a bug where a plugin file was not
+    being installed
+  * increased default font size in the segbot gui
+  * added missing run dependencies
+  * added ability to ask a text-input question
+  * better pep8 conformity
+  * rqt simple question plugin is now ready
+  * added a new gui package with a question dialog plugin for rqt
+  * Contributors: Jack O'Quin, Piyush Khandelwal, piyushk
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Sat, 19 Apr 2014 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.1.5-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 03 Sep 2013 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.1.4-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Mon, 12 Aug 2013 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.1.3-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Tue, 16 Jul 2013 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.1.2-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Sat, 13 Jul 2013 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.1.1-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Wed, 10 Jul 2013 05:00:00 -0000
+
+ros-indigo-segbot-gui (0.1.0-0trusty) trusty; urgency=high
+
+
+
+ -- Piyush Khandelwal <piyushk@gmail.com>  Fri, 28 Jun 2013 05:00:00 -0000
+
+
