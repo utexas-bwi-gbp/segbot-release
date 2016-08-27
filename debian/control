@@ -1,0 +1,13 @@
+Source: ros-indigo-segbot-led
+Section: misc
+Priority: extra
+Maintainer: Piyush Khandelwal <piyushk@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-actionlib, ros-indigo-actionlib-msgs, ros-indigo-bwi-msgs, ros-indigo-catkin, ros-indigo-roscpp, ros-indigo-serial, ros-indigo-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-segbot-led
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-actionlib, ros-indigo-actionlib-msgs, ros-indigo-bwi-msgs, ros-indigo-roscpp, ros-indigo-serial, ros-indigo-std-msgs
+Description: LED package that provides drivers for communicating with Polulu WS2812B-Based LED Strips utilizing an Arduino microcontroller.
+ Also action and service calls for standard applications.
